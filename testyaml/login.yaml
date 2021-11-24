@@ -1,0 +1,31 @@
+testinfo:
+      - id:test_login001
+        title:登录测试
+        info:打开ERP后台首页
+
+testcase:
+      - element_info: loginPhone
+        find_type: ID
+        opera_type: send_keys
+        info: 输入手机号
+      - element_info: loginPassword
+        find_type: ID
+        opera_type: send_keys
+        info: 输入密码
+      - element_info: phoneLoginBtn
+        find_type: ID
+        opera_type: click
+        info: 单击登录按钮
+      - element_info: navUlBox
+        find_type: ID
+        opera_type: perform
+        info: 鼠标悬停账户菜单
+      - element_info: //*[@id="navUlBox"]/li[2]
+        find_type: XPATH
+        opera_type: click
+        info: 选择退出
+
+check:
+      - element_info: /html/body/div[6]/div[1]/div[1]
+        find_type: XPATH
+        info: 密码错误，请重试
